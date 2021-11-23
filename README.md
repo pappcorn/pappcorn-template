@@ -2,6 +2,11 @@
 
 This is a workspace template project generate with [NX](https://nx.dev), for be a first point of init for new projects in Pappcorn
 
+# Content
+
+* [Commits](https://github.com/pappcorn/pappcorn-template#commits)
+* [Structure libraries](https://github.com/pappcorn/pappcorn-template#structure-libraries)
+
 ## Commits
 
 this project has been configured with  [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) to prevent bad commits on yours future projects
