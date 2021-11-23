@@ -28,11 +28,14 @@
   },
   "projects": {
     "demo-angular": {
-      "tags": []
+      "tags": ["angular"]
     },
     "demo-angular-e2e": {
       "tags": [],
       "implicitDependencies": ["demo-angular"]
+    },
+    "shared-angular-ui-common": {
+      "tags": ["angular"]
     }
   }
 }
