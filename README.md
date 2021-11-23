@@ -1,6 +1,9 @@
 # Pappcorn template
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
 This is a workspace template project generate with [NX](https://nx.dev), for be a first point of init for new projects in Pappcorn
+
 
 # Content
 
