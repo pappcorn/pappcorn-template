@@ -62,7 +62,13 @@
                 "input": "apps/demo-angular/src/theme/variables.scss"
               }
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/demo-angular/src/styles.scss",
+                "node_modules"
+              ]
+            }
           },
           "configurations": {
             "production": {
