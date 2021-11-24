@@ -66,9 +66,8 @@
     "typescript": "~4.3.5"
   },
   "lint-staged": {
-    "*.{ts,scss,md,html}": [
-      "prettier --check .",
-      "npm run affected:lint"
+    "*": [
+      "prettier --check ."
     ]
   }
 }
