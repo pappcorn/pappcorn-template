@@ -19,10 +19,56 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/demo-angular/src/favicon.ico",
-              "apps/demo-angular/src/assets"
+              "apps/demo-angular/src/assets",
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
+              }
             ],
-            "styles": ["apps/demo-angular/src/styles.scss"],
-            "scripts": []
+            "styles": [
+              "apps/demo-angular/src/styles.scss",
+              {
+                "input": "node_modules/@ionic/angular/css/core.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/normalize.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/structure.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/typography.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/display.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/padding.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/float-elements.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/text-alignment.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/text-transformation.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/flex-utils.css"
+              },
+              {
+                "input": "apps/demo-angular/src/theme/variables.scss"
+              }
+            ],
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/demo-angular/src/styles.scss",
+                "node_modules"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -92,7 +138,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["angular"]
     },
     "demo-angular-e2e": {
       "root": "apps/demo-angular-e2e",
@@ -119,39 +166,51 @@
             "lintFilePatterns": ["apps/demo-angular-e2e/**/*.{js,ts}"]
           }
         }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
-  },
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
       },
-      "library": {
-        "linter": "eslint"
+      "tags": [],
+      "implicitDependencies": ["demo-angular"]
+    },
+    "shared-angular-ui-common": {
+      "projectType": "library",
+      "root": "libs/shared/angular/ui-common",
+      "sourceRoot": "libs/shared/angular/ui-common/src",
+      "prefix": "papp",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/shared/angular/ui-common"],
+          "options": {
+            "project": "libs/shared/angular/ui-common/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/angular/ui-common/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/angular/ui-common/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/angular/ui-common"],
+          "options": {
+            "jestConfig": "libs/shared/angular/ui-common/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/angular/ui-common/src/**/*.ts",
+              "libs/shared/angular/ui-common/src/**/*.html"
+            ]
+          }
+        }
       },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
+      "tags": ["angular"]
     }
-  },
-  "defaultProject": "demo-angular"
+  }
 }
