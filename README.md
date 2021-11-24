@@ -9,7 +9,7 @@ This is a workspace template project generate with [NX](https://nx.dev), for be 
 - [Commits](https://github.com/pappcorn/pappcorn-template#commits)
 - [Structure libraries](https://github.com/pappcorn/pappcorn-template#structure-libraries)
 
-## Commits
+# Commits
 
 this project has been configured with [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) to prevent bad commits on yours future projects
 
@@ -21,7 +21,21 @@ this project has been configured with [Conventional Commits 1.0.0](https://www.c
 [optional footer(s)]
 ```
 
-Some examples:
+## Type
+
+Must be one of the following:
+
+- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **test**: Adding missing tests or correcting existing tests
+
+## Some examples:
 
 ```
 feat: allow provided config object to extend other configs
@@ -33,7 +47,7 @@ Bad commit
 
 <img width="714" alt="Screen Shot 2021-11-23 at 2 39 54 PM" src="https://user-images.githubusercontent.com/6579616/143092826-1db30a9e-1fd7-4c07-8868-9cd81110880e.png">
 
-## Structure libraries
+# Structure libraries
 
 There are many types of libraries in a workspace. In order to maintain a certain sense of order, we recommend having only the below four (4) types of libraries:
 

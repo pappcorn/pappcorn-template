@@ -132,7 +132,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["angular"]
     },
     "demo-angular-e2e": {
       "root": "apps/demo-angular-e2e",
@@ -159,7 +160,9 @@
             "lintFilePatterns": ["apps/demo-angular-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["demo-angular"]
     },
     "shared-angular-ui-common": {
       "projectType": "library",
@@ -200,39 +203,8 @@
             ]
           }
         }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
-  },
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
       },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
+      "tags": ["angular"]
     }
-  },
-  "defaultProject": "demo-angular"
+  }
 }
