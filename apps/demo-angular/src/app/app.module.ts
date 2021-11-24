@@ -10,7 +10,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), BrowserAnimationsModule, DateTimeModule, MatFormFieldModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    BrowserAnimationsModule,
+    DateTimeModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -5,16 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    DateTimeComponent
-  ],
-  imports: [
-    CommonModule,
-    IonicModule,
-    FormsModule
-  ],
-  exports: [
-    DateTimeComponent
-  ]
+  declarations: [DateTimeComponent],
+  imports: [CommonModule, IonicModule, FormsModule],
+  exports: [DateTimeComponent],
 })
-export class DateTimeModule { }
+export class DateTimeModule {}
